@@ -2,7 +2,6 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class CarsPark {
-
   @PrimaryGeneratedColumn()
   id: number;
   
@@ -18,4 +17,6 @@ export class CarsPark {
   @Column({unique: true})
   VIN: string
 
+  @Column({default:false})
+  rent: boolean
 }

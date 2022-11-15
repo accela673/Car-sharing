@@ -2,10 +2,13 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CarsModule } from './cars/cars.module';
+import { RentModule } from './rent/rent.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   
-  imports: [ConfigModule.forRoot({envFilePath: ".env"}),
+  imports: [
+  ConfigModule.forRoot({envFilePath: ".env"}),
   TypeOrmModule.forRoot({
     type: 'postgres',
     host: process.env.DB_HOST || "localhost",
@@ -15,7 +18,7 @@ import { CarsModule } from './cars/cars.module';
     database: process.env.DB_NAME,
     entities: ["dist/**/*.entity{.ts,.js}"],
     synchronize: true,
-  }), CarsModule],
+  }), CarsModule, RentModule, AuthModule],
   controllers: [],
   providers: [],
 })
