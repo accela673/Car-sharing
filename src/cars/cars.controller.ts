@@ -1,6 +1,7 @@
 import { Controller, Post, Body, Delete, Param, Get, UsePipes, ValidationPipe, Patch } from '@nestjs/common';
 import { CarsService } from './cars.service';
-import { CreateDto, UpdateDto } from './dto/cars.dto';
+import { CreateDto} from './dto/cars.dto';
+import { UpdateDto } from './dto/update.dto';
 
 @Controller('cars')
 export class CarsController {

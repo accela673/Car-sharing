@@ -2,7 +2,8 @@ import {BadRequestException, Injectable} from '@nestjs/common';
 import { CarsPark } from './entities/cars.entity';
 import {InjectRepository} from '@nestjs/typeorm'
 import {Repository} from 'typeorm'
-import { CreateDto, UpdateDto } from './dto/cars.dto';
+import { CreateDto } from './dto/cars.dto';
+import { UpdateDto } from './dto/update.dto';
 
 @Injectable()
 export class CarsService {

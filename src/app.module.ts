@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CarsModule } from './cars/cars.module';
 import { RentModule } from './rent/rent.module';
 import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   
@@ -18,7 +19,7 @@ import { AuthModule } from './auth/auth.module';
     database: process.env.DB_NAME,
     entities: ["dist/**/*.entity{.ts,.js}"],
     synchronize: true,
-  }), CarsModule, RentModule, AuthModule],
+  }), CarsModule, RentModule, AuthModule, UsersModule],
   controllers: [],
   providers: [],
 })

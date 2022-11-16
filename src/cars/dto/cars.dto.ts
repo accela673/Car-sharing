@@ -1,5 +1,4 @@
-import { IsNotEmpty, IsString, IsBoolean } from "class-validator";
-import { isBoolean } from "util";
+import { IsNotEmpty, IsString } from "class-validator";
 
 export class CreateDto {
     
@@ -21,21 +20,3 @@ export class CreateDto {
      
 }
 
-export class UpdateDto{
-
-    @IsString()
-    brand: string;
-
-    @IsString()
-    model: string;
-
-    @IsString()
-    number: string;
-
-    @IsString()
-    VIN: string
-
-    @IsBoolean()
-    rent: boolean
-
-}
