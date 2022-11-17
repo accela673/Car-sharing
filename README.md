@@ -26,6 +26,10 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
+This api works in swagger localhost:3000/swagger
+
+
 ## Installation
 
 ```bash
