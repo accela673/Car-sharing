@@ -4,6 +4,7 @@ import { RentController } from './rent.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Rents } from './entities/rent.entity';
 
+
 @Module({
   imports: [TypeOrmModule.forFeature([Rents])],
   providers: [RentService],

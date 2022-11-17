@@ -1,4 +1,13 @@
 import { Injectable } from '@nestjs/common';
 
+
 @Injectable()
-export class RentService {}
+export class RentService {
+
+
+
+    async getRent(){
+        return "This method is availadle only for users"
+    }
+
+}

@@ -11,7 +11,7 @@ export class AuthService {
         @InjectRepository(UsersEntity)
         private readonly userRepo: Repository<UsersEntity>) {}
 
-    async validateUser(username: string, password: string): Promise<UsersEntity> {
+    async validateUser(username: string, password: string): Promise<any> {
         const user = await this.userRepo.findOne({where:{username: username}});
         
         const passwordValid = await bcrypt.compare(password, user.password)
@@ -19,7 +19,8 @@ export class AuthService {
             throw new NotAcceptableException('Could not find the user');
         }
         if (user && passwordValid) {
-            return user;
+            const { password, ...result } = user;
+            return result;
         }
         return null;
     }

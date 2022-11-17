@@ -7,13 +7,13 @@ export class Rents{
     rent_id: number;
 
     @Column()
-    user_id: number;
+    username: string;
 
     @Column()
     car_id: number;
 
     @Column()
-    tariff: number;
+    tariff: string;
 
     @Column()
     days_count: number;
