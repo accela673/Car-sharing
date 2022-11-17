@@ -8,7 +8,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Car sharing')
-    .setDescription('Api for sharing cars')
+    .setDescription(`Api for sharing cars. To chose a tariff enter the tarif index (1 - first tariff, 2 - second tariff, 3 - third tariff)`)
     .setVersion('1.0')
     .addBearerAuth()
     .build();
