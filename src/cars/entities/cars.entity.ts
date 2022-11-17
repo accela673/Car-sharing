@@ -16,7 +16,4 @@ export class CarsPark {
 
   @Column({unique: true})
   VIN: string
-
-  @Column({default:false})
-  rent: boolean
 }

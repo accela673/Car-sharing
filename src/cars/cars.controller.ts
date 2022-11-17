@@ -2,7 +2,10 @@ import { Controller, Post, Body, Delete, Param, Get, UsePipes, ValidationPipe, P
 import { CarsService } from './cars.service';
 import { CreateDto} from './dto/cars.dto';
 import { UpdateDto } from './dto/update.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+
+@ApiTags("Cars Park")
 @Controller('cars')
 export class CarsController {
     constructor(private readonly carService: CarsService){}

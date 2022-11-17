@@ -3,7 +3,7 @@ import { ApiProperty } from "@nestjs/swagger";
 
 
 
-export class CreateUserDto {
+export class LoginDto {
     @ApiProperty({example: "Slardar673"})
     @IsNotEmpty()
     @IsString()
