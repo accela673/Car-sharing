@@ -34,8 +34,10 @@ export class RentService {
         return await this.rentEntity.remove(rent)
     }
 
-    async getAllRents(){
-        return await this.rentEntity.find()
+    async getAllRents(username: string){
+        let [rent, rentCount] = await this.rentEntity.findAndCount({where: {renter_username: username}})
+        if(!rent.length) return 'You have no rents'
+        return rent
     }
 
 }

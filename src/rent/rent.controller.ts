@@ -49,8 +49,8 @@ export class RentController {
     @ApiUnauthorizedResponse()
     @UseGuards(JwtAuthGuard)
     @Get()
-    async getAll(){
-        return await this.rentService.getAllRents()
+    async getAll(@Request() req: any){
+        return await this.rentService.getAllRents(req.user.username)
     }
 
 }
